@@ -1,0 +1,14 @@
+C:\Users\dell\source\repos\InterFace\InterFace\bin\Debug\net8.0\InterFace.exe
+C:\Users\dell\source\repos\InterFace\InterFace\bin\Debug\net8.0\InterFace.deps.json
+C:\Users\dell\source\repos\InterFace\InterFace\bin\Debug\net8.0\InterFace.runtimeconfig.json
+C:\Users\dell\source\repos\InterFace\InterFace\bin\Debug\net8.0\InterFace.dll
+C:\Users\dell\source\repos\InterFace\InterFace\bin\Debug\net8.0\InterFace.pdb
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.AssemblyInfoInputs.cache
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.AssemblyInfo.cs
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.csproj.CoreCompileInputs.cache
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.dll
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\refint\InterFace.dll
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.pdb
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\InterFace.genruntimeconfig.cache
+C:\Users\dell\source\repos\InterFace\InterFace\obj\Debug\net8.0\ref\InterFace.dll
