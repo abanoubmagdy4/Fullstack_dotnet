@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+namespace CAasynchronous
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var Thr = new Thread(() => Display("metigator using thread !!"));
+            Thr.Start();
+             Thr.Join();
+
+            Console.WriteLine("=================");
+
+            Task.Run(() => Display("metigator using thread !!!")).Wait();
+            Task.Run(() => Display("metigator using thread !!"));
+
+            Task<DateTime> task = Task.Run(() => DateTime.Now);
+            Console.WriteLine(task.Result);// Block thread here until result is ready
+            // second way to get result of Task generics
+             Console.WriteLine(task.GetAwaiter().GetResult());  // return result of task 
+        }//End of Main
+        static void Display(string message)
+        {
+            showThreadInfo(Thread.CurrentThread);
+            Console.WriteLine(message);
+        }
+
+        private static void showThreadInfo(Thread th)
+        {
+            Console.WriteLine($"Thread ID : {th.ManagedThreadId} \n Pooled :{th.IsThreadPoolThread} \n Background {th.IsBackground} ");
+        }
+    }// End Of Class Program
+
+}// End Of Namespace
+
+
+
+
+//DESKTOP-6CNDF10\SQLEXPRESS
