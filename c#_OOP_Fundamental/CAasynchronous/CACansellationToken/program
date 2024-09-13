@@ -1,0 +1,42 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace CACansellationToken
+{
+    class program
+    {
+        static async Task Main(string[] args)
+        {
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+            await DoCheck01(cancellationTokenSource); 
+            Console.ReadKey();
+        }
+        static async Task DoCheck01(CancellationTokenSource cancellationTokenSourse)
+        {
+            Task.Run(() =>
+            {
+                var input = Console.ReadKey();
+                if (input.Key == ConsoleKey.Q)
+                {
+                    cancellationTokenSourse.Cancel();
+                    Console.WriteLine("Task has been cancelled !!!");
+                }
+            });
+
+            while (!cancellationTokenSourse.Token.IsCancellationRequested) // دي معناا لو الكانسل اتنفذت دي هتكون ب ترو
+            {
+
+                Console.WriteLine("Checking ....");
+            //     await Task.Delay(4000);
+                await Task.Delay(4000, cancellationTokenSourse.Token);
+                Console.WriteLine($"Completed on {DateTime.Now}");
+                Console.WriteLine();
+
+            }
+            Console.WriteLine("Check was Terminated");
+           cancellationTokenSourse.Dispose();
+
+        }
+    }
+}
