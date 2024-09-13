@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+
+namespace CATaskContinuation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //var x = CountPrimeNumberInARange(2, 2_000_000);
+            //Console.WriteLine(x); b   
+            Task<int> task = Task.Run(() => CountPrimeNumberInARange(2, 2_000_000));
+            Console.WriteLine(task.Result); // قولنا قبل كده ان دي بتعمل بلوك للثريد 
+        }//End Of Main
+        static int CountPrimeNumberInARange(int lowerBound, int upperBound)
+        {
+            var count = 0;
+            for (var i = lowerBound; i < upperBound; i++)
+            {
+                var j = 2;
+                var isPrime = true;
+                while (j <= (int)Math.Sqrt(i))
+                {
+                    if (i % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+                    else
+                    {
+                        ++j;
+                    }
+                }
+                    if (isPrime)
+                    {
+                        ++count;
+                    }
+            
+            }
+            return count;
+
+        }
+    
+    }// End Of Class Program
+
+}// End Of Namespace
+
+
+
+
